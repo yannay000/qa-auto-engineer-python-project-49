@@ -5,7 +5,7 @@ def check_even(name: str):
 	print('Answer "yes" if the number is even, otherwise answer "no".')
 	counter = 0
 	while counter < 3:
-		number = round(random.random() * 100)
+		number = round(random.random() * 100) # NOSONAR
 		result = "yes" if number % 2 == 0 else "no"
 		print(f'Question: {number}')
 		answer = prompt.string("Your answer: ")
