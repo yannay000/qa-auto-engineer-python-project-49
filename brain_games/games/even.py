@@ -1,5 +1,6 @@
 import prompt
 import random
+from brain_games.games.base_game import BaseGame
 
 def check_even(name: str):
 	print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -18,3 +19,16 @@ def check_even(name: str):
 			return
 	print(f"Congratulations, {name}!")
 	return
+
+class EvenGame(BaseGame):
+
+	def __init__(self) -> None:
+		super().__init__()
+		self.rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+	def get_question(self) -> int:
+		return round(random.random() * 100) # NOSONAR
+	
+	def get_result(self, question) -> str:
+		result = "yes" if question % 2 == 0 else "no"
+		return result

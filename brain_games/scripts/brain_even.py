@@ -1,6 +1,6 @@
-from brain_games.cli import welcome_user
-from brain_games.even import check_even
+from brain_games.games.even import EvenGame
 
 def main():
-	name = welcome_user()
-	check_even(name)
+	even_game = EvenGame()
+	even_game.process_game()
+	# check_even(name)
