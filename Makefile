@@ -11,7 +11,7 @@ test-coverage:
 	uv run pytest --cov=hexlet_python_package --cov-report xml
 
 lint:
-	uv run ruff check brain_games
+	uv run ruff check --fix brain_games
 
 check: test lint
 

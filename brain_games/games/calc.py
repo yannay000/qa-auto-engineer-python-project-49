@@ -1,5 +1,7 @@
 import random
+
 from brain_games.games.base_game import BaseGame
+
 
 class CalcGame(BaseGame):
 
@@ -11,8 +13,8 @@ class CalcGame(BaseGame):
 		self.rules = 'What is the result of the expression?'
 
 	def get_question(self) -> str:
-		first_number = round(random.random() * self.NUMBER_RANGE) # NOSONAR
-		second_number = round(random.random() * self.NUMBER_RANGE) # NOSONAR
+		first_number = round(random.random() * self.NUMBER_RANGE)  # NOSONAR
+		second_number = round(random.random() * self.NUMBER_RANGE)  # NOSONAR
 		sign = random.choice(self.SIGNS)
 		return f"{first_number} {sign} {second_number}"
 	

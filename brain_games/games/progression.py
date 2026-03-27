@@ -1,5 +1,7 @@
 import random
+
 from brain_games.games.base_game import BaseGame
+
 
 class ProgressionGame(BaseGame):
 
@@ -14,14 +16,18 @@ class ProgressionGame(BaseGame):
 
 	def get_question(self) -> str:
 		progression_length = round(
-			random.random() * self.PROGRESSION_LENGTH_RANGE # NOSONAR
+			random.random() * self.PROGRESSION_LENGTH_RANGE  # NOSONAR
 		) + self.PROGRESSION_MIN_LENGTH
-		init = round(random.random() * self.INIT_RANGE) + 1 # NOSONAR
-		step = round(random.random() * self.STEP_RANGE) + 1 # NOSONAR
-		self.element_num = round(random.random() * (progression_length-1)) # NOSONAR
-		self.progression = [str(init + step * elem) for elem in range(progression_length)]
+		init = round(random.random() * self.INIT_RANGE) + 1  # NOSONAR
+		step = round(random.random() * self.STEP_RANGE) + 1  # NOSONAR
+		self.element_num = round(
+			random.random() * (progression_length - 1)  # NOSONAR
+		)
+		self.progression = [
+			str(init + step * elem) for elem in range(progression_length)
+		]
 		question_first = " ".join(self.progression[:self.element_num])
-		question_second = " ".join(self.progression[self.element_num+1:])
+		question_second = " ".join(self.progression[self.element_num + 1:])
 		return f"{question_first} .. {question_second}"
 	
 	def get_result(self, question) -> str:
