@@ -15,3 +15,6 @@
 
 ### Progression game
 ![Demo](svg/progression.svg)
+
+### Prime game
+![Demo](svg/prime.svg)

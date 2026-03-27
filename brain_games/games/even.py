@@ -2,6 +2,7 @@ import prompt
 import random
 from brain_games.games.base_game import BaseGame
 
+# old realization
 def check_even(name: str):
 	print('Answer "yes" if the number is even, otherwise answer "no".')
 	counter = 0
