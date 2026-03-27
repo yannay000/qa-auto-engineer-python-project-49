@@ -14,8 +14,8 @@ class ProgressionGame(BaseGame):
 
 	def get_question(self) -> str:
 		progression_length = round(
-			random.random() * self.PROGRESSION_LENGTH_RANGE
-		) + self.PROGRESSION_MIN_LENGTH # NOSONAR
+			random.random() * self.PROGRESSION_LENGTH_RANGE # NOSONAR
+		) + self.PROGRESSION_MIN_LENGTH
 		init = round(random.random() * self.INIT_RANGE) + 1 # NOSONAR
 		step = round(random.random() * self.STEP_RANGE) + 1 # NOSONAR
 		self.element_num = round(random.random() * (progression_length-1)) # NOSONAR
