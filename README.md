@@ -9,3 +9,6 @@
 
 ### Calc game
 ![Demo](svg/calc.svg)
+
+### Gcd game
+![Demo](svg/gcd.svg)

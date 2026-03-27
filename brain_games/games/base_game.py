@@ -17,7 +17,7 @@ class BaseGame:
 	def get_question(self):
 		raise NotImplementedError
 	
-	def get_result(self, question):
+	def get_result(self, question: str | int) -> str:
 		raise NotImplementedError
 
 	def game_step(self) -> bool:
