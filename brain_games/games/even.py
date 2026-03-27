@@ -23,12 +23,14 @@ def check_even(name: str):
 
 class EvenGame(BaseGame):
 
+	NUMBER_RANGE = 100
+
 	def __init__(self) -> None:
 		super().__init__()
 		self.rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 	def get_question(self) -> int:
-		return round(random.random() * 100) # NOSONAR
+		return round(random.random() * self.NUMBER_RANGE) # NOSONAR
 	
 	def get_result(self, question) -> str:
 		result = "yes" if question % 2 == 0 else "no"

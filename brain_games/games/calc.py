@@ -4,14 +4,15 @@ from brain_games.games.base_game import BaseGame
 class CalcGame(BaseGame):
 
 	SIGNS = ["+", "-", "*"]
+	NUMBER_RANGE = 100
 
 	def __init__(self) -> None:
 		super().__init__()
 		self.rules = 'What is the result of the expression?'
 
 	def get_question(self) -> str:
-		first_number = round(random.random() * 100) # NOSONAR
-		second_number = round(random.random() * 100) # NOSONAR
+		first_number = round(random.random() * self.NUMBER_RANGE) # NOSONAR
+		second_number = round(random.random() * self.NUMBER_RANGE) # NOSONAR
 		sign = random.choice(self.SIGNS)
 		return f"{first_number} {sign} {second_number}"
 	

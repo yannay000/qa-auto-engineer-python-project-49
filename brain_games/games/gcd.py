@@ -3,13 +3,15 @@ from brain_games.games.base_game import BaseGame
 
 class GcdGame(BaseGame):
 
+	NUMBER_RANGE = 100
+
 	def __init__(self) -> None:
 		super().__init__()
 		self.rules = 'Find the greatest common divisor of given numbers.'
 
 	def get_question(self) -> str:
-		first_number = round(random.random() * 100) + 1# NOSONAR
-		second_number = round(random.random() * 100) # NOSONAR
+		first_number = round(random.random() * self.NUMBER_RANGE) + 1 # NOSONAR
+		second_number = round(random.random() * self.NUMBER_RANGE) # NOSONAR
 		return f"{first_number} {second_number}"
 	
 	def get_nod(self, first: int, second: int) -> int:

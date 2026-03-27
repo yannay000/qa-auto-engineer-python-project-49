@@ -2,7 +2,9 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "Test project with games"
-authors = ["Коваль Виктор <yan1992@yandex.ru>"]
+authors = [
+	{name = "Коваль Виктор", email = "yan1992@yandex.ru"}
+]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
