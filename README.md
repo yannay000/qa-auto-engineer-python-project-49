@@ -12,3 +12,6 @@
 
 ### Gcd game
 ![Demo](svg/gcd.svg)
+
+### Progression game
+![Demo](svg/progression.svg)
